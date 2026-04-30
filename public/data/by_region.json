@@ -1,0 +1,14 @@
+[
+  {
+    "region": "Norteamérica",
+    "jobs_cut": 85046
+  },
+  {
+    "region": "Europa",
+    "jobs_cut": 11500
+  },
+  {
+    "region": "Asia-Pacífico",
+    "jobs_cut": 4600
+  }
+]

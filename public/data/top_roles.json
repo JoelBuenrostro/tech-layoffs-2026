@@ -1,0 +1,82 @@
+[
+  {
+    "role": "Atención al cliente",
+    "count": 2
+  },
+  {
+    "role": "Operaciones de TI",
+    "count": 2
+  },
+  {
+    "role": "Roles duplicados por fusión",
+    "count": 2
+  },
+  {
+    "role": "Moderación de contenido",
+    "count": 2
+  },
+  {
+    "role": "Roles administrativos",
+    "count": 2
+  },
+  {
+    "role": "Mandos intermedios",
+    "count": 1
+  },
+  {
+    "role": "Gerentes de programa",
+    "count": 1
+  },
+  {
+    "role": "Testers de QA",
+    "count": 1
+  },
+  {
+    "role": "Creación de contenido",
+    "count": 1
+  },
+  {
+    "role": "Ingenieros de RV/RA",
+    "count": 1
+  },
+  {
+    "role": "Diseñadores de metaverso",
+    "count": 1
+  },
+  {
+    "role": "Ingenieros de I+D",
+    "count": 1
+  },
+  {
+    "role": "Control de calidad (QA)",
+    "count": 1
+  },
+  {
+    "role": "Administradores de base de datos",
+    "count": 1
+  },
+  {
+    "role": "Soporte técnico",
+    "count": 1
+  },
+  {
+    "role": "Soporte de ventas",
+    "count": 1
+  },
+  {
+    "role": "Atención al cliente nivel 1",
+    "count": 1
+  },
+  {
+    "role": "Roles de marketing",
+    "count": 1
+  },
+  {
+    "role": "Ingenieros de redes",
+    "count": 1
+  },
+  {
+    "role": "Personal de I+D",
+    "count": 1
+  }
+]

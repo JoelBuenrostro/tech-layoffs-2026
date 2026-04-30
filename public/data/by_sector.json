@@ -1,0 +1,94 @@
+[
+  {
+    "sector": "Software Empresarial",
+    "jobs_cut": 31600
+  },
+  {
+    "sector": "Comercio Electrónico/Nube",
+    "jobs_cut": 16000
+  },
+  {
+    "sector": "Redes Sociales/IA",
+    "jobs_cut": 16000
+  },
+  {
+    "sector": "Telecomunicaciones",
+    "jobs_cut": 6963
+  },
+  {
+    "sector": "Redes/Ciberseguridad",
+    "jobs_cut": 6000
+  },
+  {
+    "sector": "Fintech",
+    "jobs_cut": 4000
+  },
+  {
+    "sector": "Semiconductores",
+    "jobs_cut": 3700
+  },
+  {
+    "sector": "SaaS Empresarial",
+    "jobs_cut": 2200
+  },
+  {
+    "sector": "Software de Logística",
+    "jobs_cut": 2000
+  },
+  {
+    "sector": "Manufactura",
+    "jobs_cut": 2000
+  },
+  {
+    "sector": "Redes Sociales/RV",
+    "jobs_cut": 1500
+  },
+  {
+    "sector": "CRM/SaaS",
+    "jobs_cut": 1000
+  },
+  {
+    "sector": "Software de Diseño",
+    "jobs_cut": 1000
+  },
+  {
+    "sector": "Tecnología de Supermercados",
+    "jobs_cut": 1000
+  },
+  {
+    "sector": "Farmacia Minorista",
+    "jobs_cut": 1000
+  },
+  {
+    "sector": "Tecnología de Diseño de Interiores",
+    "jobs_cut": 1000
+  },
+  {
+    "sector": "Tecnología Automotriz",
+    "jobs_cut": 1000
+  },
+  {
+    "sector": "Baterías para VE",
+    "jobs_cut": 958
+  },
+  {
+    "sector": "Comercio Electrónico",
+    "jobs_cut": 800
+  },
+  {
+    "sector": "Redes Sociales",
+    "jobs_cut": 675
+  },
+  {
+    "sector": "Ciberseguridad",
+    "jobs_cut": 500
+  },
+  {
+    "sector": "Seguros",
+    "jobs_cut": 200
+  },
+  {
+    "sector": "Investigación en IA",
+    "jobs_cut": 50
+  }
+]

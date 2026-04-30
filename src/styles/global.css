@@ -1,0 +1,118 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   global.css
+   Design tokens, reset y estilos base del sitio.
+   Importado una sola vez en src/layouts/Layout.astro.
+───────────────────────────────────────────────────────────────────────────── */
+
+/* ── Design Tokens ────────────────────────────────────────────────────────── */
+:root {
+  /* Fondos */
+  --bg-base:     #06091a;
+  --bg-surface:  #0d1425;
+  --bg-elevated: #131d35;
+  --bg-overlay:  #1a2641;
+
+  /* Bordes */
+  --border-subtle:  rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.10);
+  --border-strong:  rgba(255, 255, 255, 0.16);
+
+  /* Texto */
+  --text-primary:   #f0f4ff;
+  --text-secondary: #8899bb;
+  --text-muted:     #4a5a7a;
+  --text-disabled:  #2e3d5c;
+
+  /* Acento principal (Indigo) */
+  --accent-primary:      #6366f1;
+  --accent-primary-dim:  rgba(99, 102, 241, 0.15);
+  --accent-primary-glow: rgba(99, 102, 241, 0.35);
+
+  /* Colores semánticos KPI (uno por tarjeta) */
+  --kpi-1: #6366f1; /* Indigo  — empleos    */
+  --kpi-2: #06b6d4; /* Cyan    — empresas   */
+  --kpi-3: #f59e0b; /* Amber   — IA %       */
+  --kpi-4: #10b981; /* Emerald — trimestre  */
+
+  --kpi-1-dim: rgba(99,  102, 241, 0.12);
+  --kpi-2-dim: rgba(6,   182, 212, 0.12);
+  --kpi-3-dim: rgba(245, 158,  11, 0.12);
+  --kpi-4-dim: rgba(16,  185, 129, 0.12);
+
+  /* Paleta de gráficas — perceptualmente distintos, contraste AA sobre fondo oscuro */
+  --chart-1:  #6366f1;
+  --chart-2:  #06b6d4;
+  --chart-3:  #f59e0b;
+  --chart-4:  #10b981;
+  --chart-5:  #f43f5e;
+  --chart-6:  #a855f7;
+  --chart-7:  #0ea5e9;
+  --chart-8:  #84cc16;
+  --chart-9:  #fb923c;
+  --chart-10: #ec4899;
+
+  /* Estado semántico */
+  --status-positive-bg: rgba(16,  185, 129, 0.12);
+  --status-positive-fg: #34d399;
+  --status-negative-bg: rgba(244,  63,  94, 0.12);
+  --status-negative-fg: #fb7185;
+  --status-neutral-bg:  rgba(148, 163, 184, 0.10);
+  --status-neutral-fg:  #94a3b8;
+
+  /* Badge IA */
+  --ai-yes-bg: rgba(99, 102, 241, 0.15);
+  --ai-yes-fg: #a5b4fc;
+  --ai-no-bg:  rgba(74,  90, 122, 0.15);
+  --ai-no-fg:  #4a5a7a;
+
+  /* Espaciado — escala de 4px */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+
+  /* Radios */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
+
+  /* Sombras */
+  --shadow-card:         0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-glow-primary: 0 0 24px rgba(99, 102, 241, 0.18);
+
+  /* Tipografía */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+/* ── Reset ────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,341 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/dashboard.css";
+import fs from "fs";
+import path from "path";
+
+// ── Leer JSONs ────────────────────────────────────────────────────────────────
+const dataDir = path.join(process.cwd(), "public", "data");
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function readJSON(file: string, fallback: any): any {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(dataDir, file), "utf-8"));
+  } catch {
+    console.warn(
+      `Archivo no encontrado: ${file} — corre python3 scripts/process_data.py`,
+    );
+    return fallback;
+  }
+}
+
+const summary = readJSON("summary.json", {
+  total_jobs_cut: 0,
+  total_companies: 0,
+  ai_cited_pct: 0,
+  top_quarter: "—",
+  data_as_of: "—",
+});
+const byMonth = readJSON("by_month.json", []);
+const bySector = readJSON("by_sector.json", []);
+const byRegion = readJSON("by_region.json", []);
+const topCompanies = readJSON("top_companies.json", []);
+const detail = readJSON("detail.json", []);
+const topRoles = readJSON("top_roles.json", []);
+
+const maxRoleCount: number = topRoles[0]?.count ?? 1;
+---
+
+<Layout title="Tech Layoffs 2026 | Dashboard">
+  <!-- ── Header ─────────────────────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="header-icon">📉</div>
+        <div>
+          <h1>Tech Layoffs <span class="year-accent">2026</span></h1>
+          <p class="subtitle">
+            Análisis de despidos en la industria tecnológica
+          </p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span class="live-dot"></span>
+        <span class="badge-date">Actualizado: {summary.data_as_of ?? "—"}</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- ── KPI Cards ────────────────────────────────────────────────────────── -->
+    <section class="kpi-grid">
+      <div class="kpi-card kpi-1">
+        <div class="kpi-icon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            ><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          >
+        </div>
+        <span class="kpi-label">Total empleos perdidos</span>
+        <span class="kpi-value"
+          >{summary.total_jobs_cut?.toLocaleString("es-MX") ?? "—"}</span
+        >
+        <span class="kpi-sub">en {summary.total_companies} empresas</span>
+      </div>
+
+      <div class="kpi-card kpi-2">
+        <div class="kpi-icon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            ><rect x="2" y="7" width="20" height="14" rx="2"></rect><path
+              d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg
+          >
+        </div>
+        <span class="kpi-label">Empresas afectadas</span>
+        <span class="kpi-value">{summary.total_companies ?? "—"}</span>
+        <span class="kpi-sub">en múltiples sectores</span>
+      </div>
+
+      <div class="kpi-card kpi-3">
+        <div class="kpi-icon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            ><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"
+            ></path></svg
+          >
+        </div>
+        <span class="kpi-label">Casos con IA citada</span>
+        <span class="kpi-value">{summary.ai_cited_pct ?? "—"}%</span>
+        <span class="kpi-sub">como causa directa</span>
+      </div>
+
+      <div class="kpi-card kpi-4">
+        <div class="kpi-icon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            ><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg
+          >
+        </div>
+        <span class="kpi-label">Trimestre más activo</span>
+        <span class="kpi-value">{summary.top_quarter ?? "—"}</span>
+        <span class="kpi-sub">mayor concentración</span>
+      </div>
+    </section>
+
+    <!-- ── Charts fila 1 ────────────────────────────────────────────────────── -->
+    <section class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h2>Empleos perdidos por mes</h2>
+          <span class="chart-badge">Barras</span>
+        </div>
+        <canvas id="chartMonth"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h2>Distribución por sector</h2>
+          <span class="chart-badge">Anillo</span>
+        </div>
+        <canvas id="chartSector"></canvas>
+      </div>
+    </section>
+
+    <!-- ── Charts fila 2 ────────────────────────────────────────────────────── -->
+    <section class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h2>Distribución por región</h2>
+          <span class="chart-badge">Circular</span>
+        </div>
+        <canvas id="chartRegion"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h2>Top 10 empresas</h2>
+          <span class="chart-badge">Clasificación</span>
+        </div>
+        <canvas id="chartCompanies"></canvas>
+      </div>
+    </section>
+
+    <!-- ── Roles más afectados ───────────────────────────────────────────────── -->
+    <section class="card roles-section">
+      <div class="section-header">
+        <h2>Roles más afectados</h2>
+        <p class="section-desc">
+          Cargos que concentraron el mayor volumen de despidos según fuentes
+          verificadas
+        </p>
+      </div>
+      <div class="roles-grid">
+        {
+          (topRoles as any[]).map((r: any, i: number) => {
+            const intensity = Math.round((r.count / maxRoleCount) * 100);
+            return (
+              <div class="role-pill" style={`--intensity: ${intensity}`}>
+                <span class="role-rank">#{i + 1}</span>
+                <span class="role-name">{r.role}</span>
+                {r.count > 1 && <span class="role-count">{r.count}</span>}
+              </div>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <!-- ── Tabla interactiva ─────────────────────────────────────────────────── -->
+    <section class="card table-section">
+      <div class="section-header">
+        <div>
+          <h2>Detalle por empresa</h2>
+          <p class="section-desc">
+            Filtra y explora el registro completo de despidos
+          </p>
+        </div>
+      </div>
+
+      <div class="filters-bar">
+        <div class="search-wrap">
+          <svg
+            class="search-icon"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            ><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"
+            ></path></svg
+          >
+          <input id="searchInput" type="text" placeholder="Buscar empresa…" />
+        </div>
+        <select id="filterSector">
+          <option value="">Todos los sectores</option>
+          {
+            (
+              Array.from(
+                new Set((detail as any[]).map((d: any) => d.sector)),
+              ) as string[]
+            )
+              .sort()
+              .map((s) => <option value={s as string}>{s}</option>)
+          }
+        </select>
+        <select id="filterRegion">
+          <option value="">Todas las regiones</option>
+          {
+            (
+              Array.from(
+                new Set((detail as any[]).map((d: any) => d.region)),
+              ) as string[]
+            )
+              .sort()
+              .map((r) => <option value={r as string}>{r}</option>)
+          }
+        </select>
+        <select id="filterAI">
+          <option value="">IA: todos</option>
+          <option value="true">IA citada</option>
+          <option value="false">Sin IA</option>
+        </select>
+        <span id="tableCount" class="filter-count"></span>
+      </div>
+
+      <div class="table-wrap">
+        <table id="mainTable">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Fecha</th>
+              <th class="th-right">Empleos</th>
+              <th>Sector</th>
+              <th>Región</th>
+              <th>IA</th>
+              <th>Bolsa</th>
+              <th>Razón declarada</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              (detail as any[]).map((row: any) => (
+                <tr
+                  data-company={row.company?.toLowerCase()}
+                  data-sector={row.sector}
+                  data-region={row.region}
+                  data-ai={String(row.ai_cited)}
+                >
+                  <td class="td-company">{row.company}</td>
+                  <td class="td-date">{row.layoff_date}</td>
+                  <td class="td-num">
+                    {row.jobs_cut?.toLocaleString("es-MX")}
+                  </td>
+                  <td class="td-muted">{row.sector}</td>
+                  <td class="td-muted">{row.region}</td>
+                  <td>
+                    <span
+                      class={`tag ${row.ai_cited ? "tag-ai-yes" : "tag-ai-no"}`}
+                    >
+                      {row.ai_cited ? "Sí" : "No"}
+                    </span>
+                  </td>
+                  <td>
+                    <span
+                      class={`tag tag-stock-${row.stock === "Positiva" ? "positiva" : row.stock === "Negativa" ? "negativa" : "neutral"}`}
+                    >
+                      {row.stock === "Positiva"
+                        ? "↑ Sube"
+                        : row.stock === "Negativa"
+                          ? "↓ Baja"
+                          : "— Neutral"}
+                    </span>
+                  </td>
+                  <td class="td-reason">{row.reason}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Proyecto de análisis de datos</span>
+      <span class="footer-sep">·</span>
+      <a
+        href="https://www.linkedin.com/in/joelbuenrostro"
+        target="_blank"
+        rel="noopener">Joel Buenrostro</a
+      >
+      <span class="footer-sep">·</span>
+      <span>Datos actualizados mensualmente</span>
+    </div>
+  </footer>
+</Layout>
+
+<!-- Datos del servidor serializados para el cliente -->
+<script
+  type="application/json"
+  id="chart-data"
+  set:html={JSON.stringify({ byMonth, bySector, byRegion, topCompanies })}
+/>
+
+<!-- Entry point del dashboard -->
+<script>
+  import '../scripts/main';
+</script>

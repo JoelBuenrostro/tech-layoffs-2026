@@ -1,0 +1,42 @@
+[
+  {
+    "company": "Oracle",
+    "jobs_cut": 30000
+  },
+  {
+    "company": "Amazon",
+    "jobs_cut": 16000
+  },
+  {
+    "company": "Meta Platforms (Planned)",
+    "jobs_cut": 16000
+  },
+  {
+    "company": "Cisco",
+    "jobs_cut": 6000
+  },
+  {
+    "company": "Telefonica",
+    "jobs_cut": 5000
+  },
+  {
+    "company": "Block",
+    "jobs_cut": 4000
+  },
+  {
+    "company": "Workday",
+    "jobs_cut": 2200
+  },
+  {
+    "company": "ams OSRAM",
+    "jobs_cut": 2000
+  },
+  {
+    "company": "WiseTech Global",
+    "jobs_cut": 2000
+  },
+  {
+    "company": "Algoma Steel",
+    "jobs_cut": 2000
+  }
+]
