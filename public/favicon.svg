@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#6366f1"/>
-  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="white">📉</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#261c0f"/>
+  <polygon points="5,10 12,16 18,12 27,22 27,28 5,28" fill="#d4a373" fill-opacity="0.2"/>
+  <polyline points="5,10 12,16 18,12 27,22" stroke="#d4a373" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>

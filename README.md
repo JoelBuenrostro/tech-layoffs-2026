@@ -144,6 +144,15 @@ El deploy es automático vía GitHub Actions al hacer push a `main`. El workflow
 
 ---
 
+## Fuente de datos
+
+Dataset original publicado en Kaggle por **Syed Ali Taqi**:
+[Tech Layoffs 2026 — AI Job Cuts Tracker](https://www.kaggle.com/datasets/alitaqishah/tech-layoffs-2026-ai-job-cuts-tracker)
+
+Licencia [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) — sin restricciones de uso o distribución.
+
+---
+
 ## Autor
 
-**Joel Buenrostro** · [LinkedIn](https://www.linkedin.com/in/joelbuenrostro)
+**Joel Buenrostro**

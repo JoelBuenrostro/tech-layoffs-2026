@@ -19,15 +19,23 @@ export interface ChartData {
   topCompanies: CompanyRow[];
 }
 
-// Paleta de colores — perceptualmente distintos sobre fondo oscuro
+// Paleta de colores — Dry Sage · Beige · Cornsilk · Papaya Whip · Light Bronze + variantes
 const PALETTE = [
-  '#6366f1', '#06b6d4', '#f59e0b', '#10b981', '#f43f5e',
-  '#a855f7', '#0ea5e9', '#84cc16', '#fb923c', '#ec4899',
+  '#d4a373', // Light Bronze
+  '#ccd5ae', // Dry Sage
+  '#fefae0', // Cornsilk
+  '#faedcd', // Papaya Whip
+  '#b8904a', // Bronze oscuro
+  '#9aaa70', // Sage oscuro
+  '#f0d090', // Dorado claro
+  '#e8c8a0', // Melocotón
+  '#7a9060', // Sage profundo
+  '#e9edc9', // Beige
 ];
 
-const GRID_COLOR   = 'rgba(255,255,255,0.05)';
-const TICK_COLOR   = '#4a5a7a';
-const LEGEND_COLOR = '#8899bb';
+const GRID_COLOR   = 'rgba(254,250,224,0.06)';
+const TICK_COLOR   = '#ccd5ae';
+const LEGEND_COLOR = '#e9edc9';
 
 const baseScales = {
   x: { ticks: { color: TICK_COLOR, font: { size: 11 } }, grid: { color: GRID_COLOR } },
@@ -49,11 +57,11 @@ export function initCharts(data: ChartData): void {
         data: byMonth.map(d => d.jobs_cut),
         backgroundColor: (ctx: any) => {
           const g = ctx.chart.ctx.createLinearGradient(0, 0, 0, 260);
-          g.addColorStop(0, 'rgba(99,102,241,0.85)');
-          g.addColorStop(1, 'rgba(99,102,241,0.2)');
+          g.addColorStop(0, 'rgba(212,163,115,0.90)');
+          g.addColorStop(1, 'rgba(212,163,115,0.15)');
           return g;
         },
-        borderColor: '#6366f1',
+        borderColor: '#d4a373',
         borderWidth: 1,
         borderRadius: 5,
         borderSkipped: false,
@@ -113,11 +121,11 @@ export function initCharts(data: ChartData): void {
         data: topCompanies.map(d => d.jobs_cut),
         backgroundColor: (ctx: any) => {
           const g = ctx.chart.ctx.createLinearGradient(300, 0, 0, 0);
-          g.addColorStop(0, 'rgba(245,158,11,0.85)');
-          g.addColorStop(1, 'rgba(245,158,11,0.2)');
+          g.addColorStop(0, 'rgba(204,213,174,0.90)');
+          g.addColorStop(1, 'rgba(204,213,174,0.15)');
           return g;
         },
-        borderColor: '#f59e0b',
+        borderColor: '#ccd5ae',
         borderWidth: 1,
         borderRadius: 4,
         borderSkipped: false,

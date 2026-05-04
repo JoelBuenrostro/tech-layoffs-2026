@@ -5,65 +5,70 @@
 ───────────────────────────────────────────────────────────────────────────── */
 
 /* ── Design Tokens ────────────────────────────────────────────────────────── */
+/*
+   Paleta: Dry Sage · Beige · Cornsilk · Papaya Whip · Light Bronze
+           #ccd5ae    #e9edc9  #fefae0    #faedcd       #d4a373
+   Tema: oscuro-terroso — fondos café profundo, acentos cálidos
+*/
 :root {
-  /* Fondos */
-  --bg-base:     #06091a;
-  --bg-surface:  #0d1425;
-  --bg-elevated: #131d35;
-  --bg-overlay:  #1a2641;
+  /* Fondos — café oscuro profundo derivado de la paleta */
+  --bg-base:     #1a140a;
+  --bg-surface:  #261c0f;
+  --bg-elevated: #342618;
+  --bg-overlay:  #43311f;
 
-  /* Bordes */
-  --border-subtle:  rgba(255, 255, 255, 0.06);
-  --border-default: rgba(255, 255, 255, 0.10);
-  --border-strong:  rgba(255, 255, 255, 0.16);
+  /* Bordes — crema sutil sobre oscuro */
+  --border-subtle:  rgba(254, 250, 224, 0.06);
+  --border-default: rgba(254, 250, 224, 0.11);
+  --border-strong:  rgba(254, 250, 224, 0.20);
 
   /* Texto */
-  --text-primary:   #f0f4ff;
-  --text-secondary: #8899bb;
-  --text-muted:     #4a5a7a;
-  --text-disabled:  #2e3d5c;
+  --text-primary:   #fefae0; /* Cornsilk      */
+  --text-secondary: #e9edc9; /* Beige         */
+  --text-muted:     #ccd5ae; /* Dry Sage      */
+  --text-disabled:  #6a6050;
 
-  /* Acento principal (Indigo) */
-  --accent-primary:      #6366f1;
-  --accent-primary-dim:  rgba(99, 102, 241, 0.15);
-  --accent-primary-glow: rgba(99, 102, 241, 0.35);
+  /* Acento principal — Light Bronze */
+  --accent-primary:      #d4a373;
+  --accent-primary-dim:  rgba(212, 163, 115, 0.18);
+  --accent-primary-glow: rgba(212, 163, 115, 0.38);
 
-  /* Colores semánticos KPI (uno por tarjeta) */
-  --kpi-1: #6366f1; /* Indigo  — empleos    */
-  --kpi-2: #06b6d4; /* Cyan    — empresas   */
-  --kpi-3: #f59e0b; /* Amber   — IA %       */
-  --kpi-4: #10b981; /* Emerald — trimestre  */
+  /* Colores semánticos KPI */
+  --kpi-1: #d4a373; /* Light Bronze  — empleos    */
+  --kpi-2: #ccd5ae; /* Dry Sage      — empresas   */
+  --kpi-3: #e8b86d; /* Amber dorado  — IA %       */
+  --kpi-4: #a8c484; /* Sage verde    — trimestre  */
 
-  --kpi-1-dim: rgba(99,  102, 241, 0.12);
-  --kpi-2-dim: rgba(6,   182, 212, 0.12);
-  --kpi-3-dim: rgba(245, 158,  11, 0.12);
-  --kpi-4-dim: rgba(16,  185, 129, 0.12);
+  --kpi-1-dim: rgba(212, 163, 115, 0.14);
+  --kpi-2-dim: rgba(204, 213, 174, 0.14);
+  --kpi-3-dim: rgba(232, 184, 109, 0.14);
+  --kpi-4-dim: rgba(168, 196, 132, 0.14);
 
-  /* Paleta de gráficas — perceptualmente distintos, contraste AA sobre fondo oscuro */
-  --chart-1:  #6366f1;
-  --chart-2:  #06b6d4;
-  --chart-3:  #f59e0b;
-  --chart-4:  #10b981;
-  --chart-5:  #f43f5e;
-  --chart-6:  #a855f7;
-  --chart-7:  #0ea5e9;
-  --chart-8:  #84cc16;
-  --chart-9:  #fb923c;
-  --chart-10: #ec4899;
+  /* Paleta de gráficas — los 5 colores + variantes */
+  --chart-1:  #d4a373; /* Light Bronze         */
+  --chart-2:  #ccd5ae; /* Dry Sage             */
+  --chart-3:  #fefae0; /* Cornsilk             */
+  --chart-4:  #faedcd; /* Papaya Whip          */
+  --chart-5:  #b8904a; /* Bronze oscuro        */
+  --chart-6:  #9aaa70; /* Sage oscuro          */
+  --chart-7:  #f0d090; /* Dorado claro         */
+  --chart-8:  #e8c8a0; /* Melocotón            */
+  --chart-9:  #7a9060; /* Sage profundo        */
+  --chart-10: #e9edc9; /* Beige                */
 
   /* Estado semántico */
-  --status-positive-bg: rgba(16,  185, 129, 0.12);
-  --status-positive-fg: #34d399;
-  --status-negative-bg: rgba(244,  63,  94, 0.12);
-  --status-negative-fg: #fb7185;
-  --status-neutral-bg:  rgba(148, 163, 184, 0.10);
-  --status-neutral-fg:  #94a3b8;
+  --status-positive-bg: rgba(168, 196, 132, 0.14);
+  --status-positive-fg: #a8c484; /* Sage verde   */
+  --status-negative-bg: rgba(212, 163, 115, 0.14);
+  --status-negative-fg: #d4a373; /* Light Bronze */
+  --status-neutral-bg:  rgba(204, 213, 174, 0.12);
+  --status-neutral-fg:  #ccd5ae; /* Dry Sage     */
 
   /* Badge IA */
-  --ai-yes-bg: rgba(99, 102, 241, 0.15);
-  --ai-yes-fg: #a5b4fc;
-  --ai-no-bg:  rgba(74,  90, 122, 0.15);
-  --ai-no-fg:  #4a5a7a;
+  --ai-yes-bg: rgba(212, 163, 115, 0.18);
+  --ai-yes-fg: #d4a373;
+  --ai-no-bg:  rgba(204, 213, 174, 0.14);
+  --ai-no-fg:  #ccd5ae;
 
   /* Espaciado — escala de 4px */
   --space-1:  0.25rem;
@@ -83,8 +88,8 @@
   --radius-full: 9999px;
 
   /* Sombras */
-  --shadow-card:         0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.3);
-  --shadow-glow-primary: 0 0 24px rgba(99, 102, 241, 0.18);
+  --shadow-card:         0 1px 3px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-glow-primary: 0 0 24px rgba(212, 163, 115, 0.22);
 
   /* Tipografía */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -111,8 +116,8 @@ body {
   color: var(--text-primary);
   min-height: 100vh;
   background-image:
-    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(212, 163, 115, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(204, 213, 174, 0.06) 0%, transparent 50%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

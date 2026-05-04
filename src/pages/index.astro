@@ -4,7 +4,7 @@ import "../styles/dashboard.css";
 import fs from "fs";
 import path from "path";
 
-// ── Leer JSONs ────────────────────────────────────────────────────────────────
+// ── Leer JSONs ──
 const dataDir = path.join(process.cwd(), "public", "data");
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -37,7 +37,7 @@ const maxRoleCount: number = topRoles[0]?.count ?? 1;
 ---
 
 <Layout title="Tech Layoffs 2026 | Dashboard">
-  <!-- ── Header ─────────────────────────────────────────────────────────────── -->
+  <!-- Header -->
   <header class="header">
     <div class="header-inner">
       <div class="header-brand">
@@ -57,7 +57,7 @@ const maxRoleCount: number = topRoles[0]?.count ?? 1;
   </header>
 
   <main class="main">
-    <!-- ── KPI Cards ────────────────────────────────────────────────────────── -->
+    <!-- KPI Cards -->
     <section class="kpi-grid">
       <div class="kpi-card kpi-1">
         <div class="kpi-icon">
@@ -136,7 +136,7 @@ const maxRoleCount: number = topRoles[0]?.count ?? 1;
       </div>
     </section>
 
-    <!-- ── Charts fila 1 ────────────────────────────────────────────────────── -->
+    <!-- Charts fila 1 -->
     <section class="charts-grid">
       <div class="chart-card">
         <div class="chart-card-header">
@@ -154,7 +154,7 @@ const maxRoleCount: number = topRoles[0]?.count ?? 1;
       </div>
     </section>
 
-    <!-- ── Charts fila 2 ────────────────────────────────────────────────────── -->
+    <!-- Charts fila 2 -->
     <section class="charts-grid">
       <div class="chart-card">
         <div class="chart-card-header">
@@ -172,7 +172,7 @@ const maxRoleCount: number = topRoles[0]?.count ?? 1;
       </div>
     </section>
 
-    <!-- ── Roles más afectados ───────────────────────────────────────────────── -->
+    <!-- Roles más afectados -->
     <section class="card roles-section">
       <div class="section-header">
         <h2>Roles más afectados</h2>
@@ -197,7 +197,7 @@ const maxRoleCount: number = topRoles[0]?.count ?? 1;
       </div>
     </section>
 
-    <!-- ── Tabla interactiva ─────────────────────────────────────────────────── -->
+    <!-- Tabla interactiva -->
     <section class="card table-section">
       <div class="section-header">
         <div>
@@ -337,5 +337,5 @@ const maxRoleCount: number = topRoles[0]?.count ?? 1;
 
 <!-- Entry point del dashboard -->
 <script>
-  import '../scripts/main';
+  import "../scripts/main";
 </script>
