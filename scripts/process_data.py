@@ -21,6 +21,7 @@ OUTPUT_DIR = BASE_DIR / "public" / "data"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 MESES = {
+    # Formato completo (registros originales)
     "January 2026":   "Enero 2026",
     "February 2026":  "Febrero 2026",
     "March 2026":     "Marzo 2026",
@@ -33,9 +34,23 @@ MESES = {
     "October 2026":   "Octubre 2026",
     "November 2026":  "Noviembre 2026",
     "December 2026":  "Diciembre 2026",
+    # Formato corto (registros de layoffs.fyi)
+    "January":   "Enero 2026",
+    "February":  "Febrero 2026",
+    "March":     "Marzo 2026",
+    "April":     "Abril 2026",
+    "May":       "Mayo 2026",
+    "June":      "Junio 2026",
+    "July":      "Julio 2026",
+    "August":    "Agosto 2026",
+    "September": "Septiembre 2026",
+    "October":   "Octubre 2026",
+    "November":  "Noviembre 2026",
+    "December":  "Diciembre 2026",
 }
 
 MES_CORTO = {
+    # Formato completo
     "January 2026":   "Ene",
     "February 2026":  "Feb",
     "March 2026":     "Mar",
@@ -48,6 +63,19 @@ MES_CORTO = {
     "October 2026":   "Oct",
     "November 2026":  "Nov",
     "December 2026":  "Dic",
+    # Formato corto
+    "January":   "Ene",
+    "February":  "Feb",
+    "March":     "Mar",
+    "April":     "Abr",
+    "May":       "May",
+    "June":      "Jun",
+    "July":      "Jul",
+    "August":    "Ago",
+    "September": "Sep",
+    "October":   "Oct",
+    "November":  "Nov",
+    "December":  "Dic",
 }
 
 TRIMESTRES = {
@@ -75,8 +103,11 @@ PAISES = {
     "India":       "India",
     "Spain":       "España",
     "Sweden":      "Suecia",
-    "Netherlands": "Países Bajos",
-    "Austria":     "Austria",
+    "Netherlands":   "Países Bajos",
+    "Austria":       "Austria",
+    "Israel":        "Israel",
+    "Brazil":        "Brasil",
+    "Czech Republic":"República Checa",
 }
 
 SECTORES = {
@@ -231,8 +262,17 @@ for r in rows:
     quarter_totals[r["quarter_es"]] += r["jobs_cut"]
 top_quarter = max(quarter_totals, key=quarter_totals.get) if quarter_totals else "N/D"
 
-dates      = [r.get("data_as_of", "") for r in rows if r.get("data_as_of")]
-data_as_of = dates[0] if dates else "N/D"
+# Calcular fecha automáticamente desde el registro más reciente del CSV
+from datetime import datetime
+layoff_dates = [r.get("layoff_date", "") for r in rows if r.get("layoff_date", "").strip()]
+if layoff_dates:
+    latest = max(layoff_dates)
+    dt = datetime.strptime(latest, "%Y-%m-%d")
+    MESES_ES = ["Enero","Febrero","Marzo","Abril","Mayo","Junio",
+                "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
+    data_as_of = f"{dt.day} de {MESES_ES[dt.month - 1]} de {dt.year}"
+else:
+    data_as_of = "N/D"
 
 save_json({
     "total_jobs_cut":   total_jobs,
@@ -258,6 +298,19 @@ by_month = sorted(
     key=lambda x: next((i for i, m in enumerate(MES_ORDER) if m in x["month"]), 99)
 )
 save_json(by_month, "by_month.json")
+
+# ── Acumulado mensual ─────────────────────────────────────────────────────
+cumulative = 0
+cumulative_data = []
+for entry in by_month:
+    cumulative += entry["jobs_cut"]
+    cumulative_data.append({
+        "month":       entry["month"],
+        "month_short": entry["month_short"],
+        "jobs_cut":    entry["jobs_cut"],
+        "cumulative":  cumulative,
+    })
+save_json(cumulative_data, "cumulative.json")
 
 sector_data = defaultdict(int)
 for r in rows:
@@ -291,6 +344,11 @@ save_json(sorted(
     key=lambda x: x["quarter"]
 ), "by_quarter.json")
 
+TIPOS_EMPRESA = {
+    "Public":  "Pública",
+    "Private": "Privada",
+}
+
 save_json([
     {
         "company":      r.get("company"),
@@ -306,6 +364,7 @@ save_json([
         "size":         r["size_es"],
         "stock":        r["stock_es"],
         "source":       r.get("verified_source"),
+        "company_type": t(TIPOS_EMPRESA, r.get("company_type", "")),
     }
     for r in rows
 ], "detail.json")

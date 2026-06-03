@@ -2,21 +2,25 @@
   {
     "month": "Enero 2026",
     "month_short": "Ene",
-    "jobs_cut": 35675
+    "jobs_cut": 35675,
+    "cumulative": 35675
   },
   {
     "month": "Febrero 2026",
     "month_short": "Feb",
-    "jobs_cut": 49745
+    "jobs_cut": 49745,
+    "cumulative": 85420
   },
   {
     "month": "Marzo 2026",
     "month_short": "Mar",
-    "jobs_cut": 23423
+    "jobs_cut": 23423,
+    "cumulative": 108843
   },
   {
     "month": "Abril 2026",
     "month_short": "Abr",
-    "jobs_cut": 2030
+    "jobs_cut": 2030,
+    "cumulative": 110873
   }
 ]

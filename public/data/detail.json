@@ -12,7 +12,8 @@
     "quarter": "T1 2026",
     "size": "Mega (5K+)",
     "stock": "Positiva",
-    "source": "CNBC / NetworkWorld"
+    "source": "CNBC / NetworkWorld",
+    "company_type": "Pública"
   },
   {
     "company": "Block",
@@ -27,7 +28,8 @@
     "quarter": "T1 2026",
     "size": "Grande (2K–5K)",
     "stock": "Positiva",
-    "source": "CNBC / Crunchbase"
+    "source": "CNBC / Crunchbase",
+    "company_type": "Pública"
   },
   {
     "company": "Meta Reality Labs",
@@ -42,7 +44,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Positiva",
-    "source": "InformationWeek / NYT"
+    "source": "InformationWeek / NYT",
+    "company_type": "Pública"
   },
   {
     "company": "Atlassian",
@@ -57,7 +60,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Positiva",
-    "source": "TechRepublic / Metaintro"
+    "source": "TechRepublic / Metaintro",
+    "company_type": "Pública"
   },
   {
     "company": "Oracle",
@@ -72,7 +76,8 @@
     "quarter": "T1 2026",
     "size": "Mega (5K+)",
     "stock": "Positiva",
-    "source": "IBTimes"
+    "source": "IBTimes",
+    "company_type": "Pública"
   },
   {
     "company": "Salesforce",
@@ -87,7 +92,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Positiva",
-    "source": "NetworkWorld / Bloomberg"
+    "source": "NetworkWorld / Bloomberg",
+    "company_type": "Pública"
   },
   {
     "company": "Autodesk",
@@ -102,7 +108,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Positiva",
-    "source": "NetworkWorld"
+    "source": "NetworkWorld",
+    "company_type": "Pública"
   },
   {
     "company": "eBay",
@@ -117,7 +124,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Positiva",
-    "source": "NetworkWorld"
+    "source": "NetworkWorld",
+    "company_type": "Pública"
   },
   {
     "company": "Pinterest",
@@ -132,7 +140,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Positiva",
-    "source": "NetworkWorld"
+    "source": "NetworkWorld",
+    "company_type": "Pública"
   },
   {
     "company": "Ericsson",
@@ -147,7 +156,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Positiva",
-    "source": "InformationWeek / FierceNetwork"
+    "source": "InformationWeek / FierceNetwork",
+    "company_type": "Pública"
   },
   {
     "company": "ASML",
@@ -162,7 +172,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Negativa",
-    "source": "NetworkWorld"
+    "source": "NetworkWorld",
+    "company_type": "Pública"
   },
   {
     "company": "ams OSRAM",
@@ -177,7 +188,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Positiva",
-    "source": "NetworkWorld"
+    "source": "NetworkWorld",
+    "company_type": "Pública"
   },
   {
     "company": "Ocado",
@@ -192,7 +204,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Positiva",
-    "source": "NetworkWorld"
+    "source": "NetworkWorld",
+    "company_type": "Pública"
   },
   {
     "company": "WiseTech Global",
@@ -207,7 +220,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Positiva",
-    "source": "Medha Cloud"
+    "source": "Medha Cloud",
+    "company_type": "Pública"
   },
   {
     "company": "Cisco",
@@ -222,7 +236,8 @@
     "quarter": "T1 2026",
     "size": "Mega (5K+)",
     "stock": "Negativa",
-    "source": "Computerworld"
+    "source": "Computerworld",
+    "company_type": "Pública"
   },
   {
     "company": "T-Mobile",
@@ -237,7 +252,8 @@
     "quarter": "T1 2026",
     "size": "Pequeña (<500)",
     "stock": "Negativa",
-    "source": "FierceNetwork"
+    "source": "FierceNetwork",
+    "company_type": "Pública"
   },
   {
     "company": "SK Battery America",
@@ -252,7 +268,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Negativa",
-    "source": "Intellizence"
+    "source": "Intellizence",
+    "company_type": "Pública"
   },
   {
     "company": "Walgreens",
@@ -267,7 +284,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Negativa",
-    "source": "Intellizence"
+    "source": "Intellizence",
+    "company_type": "Pública"
   },
   {
     "company": "Telefonica",
@@ -282,7 +300,8 @@
     "quarter": "T1 2026",
     "size": "Grande (2K–5K)",
     "stock": "Positiva",
-    "source": "FierceNetwork"
+    "source": "FierceNetwork",
+    "company_type": "Pública"
   },
   {
     "company": "xAI",
@@ -297,7 +316,8 @@
     "quarter": "T1 2026",
     "size": "Pequeña (<500)",
     "stock": "Neutral",
-    "source": "TechCrunch"
+    "source": "TechCrunch",
+    "company_type": "Privada"
   },
   {
     "company": "Palo Alto Networks",
@@ -312,7 +332,8 @@
     "quarter": "T1 2026",
     "size": "Pequeña (<500)",
     "stock": "Positiva",
-    "source": "InformationWeek"
+    "source": "InformationWeek",
+    "company_type": "Pública"
   },
   {
     "company": "Livspace",
@@ -327,7 +348,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Neutral",
-    "source": "Medha Cloud"
+    "source": "Medha Cloud",
+    "company_type": "Privada"
   },
   {
     "company": "General Motors Tech",
@@ -342,7 +364,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Negativa",
-    "source": "Computerworld"
+    "source": "Computerworld",
+    "company_type": "Pública"
   },
   {
     "company": "Workday",
@@ -357,7 +380,8 @@
     "quarter": "T1 2026",
     "size": "Grande (2K–5K)",
     "stock": "Positiva",
-    "source": "Computerworld"
+    "source": "Computerworld",
+    "company_type": "Pública"
   },
   {
     "company": "Ergo Insurance",
@@ -372,7 +396,8 @@
     "quarter": "T1 2026",
     "size": "Pequeña (<500)",
     "stock": "Neutral",
-    "source": "Intellizence"
+    "source": "Intellizence",
+    "company_type": "Privada"
   },
   {
     "company": "Algoma Steel",
@@ -387,7 +412,8 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Negativa",
-    "source": "Intellizence"
+    "source": "Intellizence",
+    "company_type": "Pública"
   },
   {
     "company": "Meta Platforms (Planned)",
@@ -402,7 +428,8 @@
     "quarter": "T1 2026",
     "size": "Mega (5K+)",
     "stock": "Positiva",
-    "source": "CNBC / Reuters / IBTimes"
+    "source": "CNBC / Reuters / IBTimes",
+    "company_type": "Pública"
   },
   {
     "company": "Algoma Steel",
@@ -417,6 +444,407 @@
     "quarter": "T1 2026",
     "size": "Mediana (500–2K)",
     "stock": "Negativa",
-    "source": "Intellizence"
+    "source": "Intellizence",
+    "company_type": "Pública"
+  },
+  {
+    "company": "eToro",
+    "layoff_date": "2026-01-13",
+    "jobs_cut": 105,
+    "sector": "Fintech",
+    "region": "Europa",
+    "country": "Israel",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Enero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://www.calcalistech.com/ctechnews/article/sjedi1vh11x",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Meta",
+    "layoff_date": "2026-01-13",
+    "jobs_cut": 1500,
+    "sector": "Redes Sociales",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Enero 2026",
+    "quarter": "T1 2026",
+    "size": "Mediana (500–2K)",
+    "stock": "Negativa",
+    "source": "https://www.nytimes.com/2026/01/12/technology/meta-layoffs-reality-labs.html?unlocked_article_code=1.D1A.ckee.3ANQhKMxi5Ld&smid=url-share",
+    "company_type": "Pública"
+  },
+  {
+    "company": "Playtika",
+    "layoff_date": "2026-01-14",
+    "jobs_cut": 500,
+    "sector": "Redes Sociales",
+    "region": "Europa",
+    "country": "Israel",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Enero 2026",
+    "quarter": "T1 2026",
+    "size": "Mediana (500–2K)",
+    "stock": "Negativa",
+    "source": "https://www.calcalistech.com/ctechnews/article/bkl6xzhswe",
+    "company_type": "Pública"
+  },
+  {
+    "company": "Aleph Alpha",
+    "layoff_date": "2026-01-14",
+    "jobs_cut": 50,
+    "sector": "Investigación en IA",
+    "region": "Europa",
+    "country": "Alemania",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Enero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://www.startbase.com/news/aleph-alpha-baut-rund-50-stellen-ab/",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Tipalti",
+    "layoff_date": "2026-01-15",
+    "jobs_cut": 100,
+    "sector": "Fintech",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Enero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://en.globes.co.il/en/article-tipalti-laying-off-dozens-of-employees-1001532153",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Polygon",
+    "layoff_date": "2026-01-16",
+    "jobs_cut": 60,
+    "sector": "Fintech",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Enero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://www.coindesk.com/business/2026/01/16/polygon-labs-said-to-have-laid-off-60-staff-following-new-usd250-million-acquisition",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Moon Active",
+    "layoff_date": "2026-01-27",
+    "jobs_cut": 110,
+    "sector": "Redes Sociales",
+    "region": "Europa",
+    "country": "Israel",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Enero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://www.calcalistech.com/ctechnews/article/jvbqyjznm",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Kiwi.com",
+    "layoff_date": "2026-01-29",
+    "jobs_cut": 250,
+    "sector": "Comercio Electrónico",
+    "region": "Europa",
+    "country": "República Checa",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Enero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://forbes.cz/kiwi-pokracuje-v-propousteni-odchazi-tretina-zamestnancu/",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Zupee",
+    "layoff_date": "2026-01-30",
+    "jobs_cut": 200,
+    "sector": "Redes Sociales",
+    "region": "Asia-Pacífico",
+    "country": "India",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Enero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://yourstory.com/2026/01/zupee-cuts-about-200-jobs-in-second-layoff-after-money-gaming-ban",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Huawei",
+    "layoff_date": "2026-02-15",
+    "jobs_cut": 50,
+    "sector": "Semiconductores",
+    "region": "Europa",
+    "country": "Israel",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Febrero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://www.calcalistech.com/ctechnews/article/bkmmdojuwx",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Axonius",
+    "layoff_date": "2026-02-15",
+    "jobs_cut": 40,
+    "sector": "Ciberseguridad",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Febrero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://www.calcalistech.com/ctechnews/article/s1xchi1oze",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Cyberark",
+    "layoff_date": "2026-02-17",
+    "jobs_cut": 500,
+    "sector": "Ciberseguridad",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Febrero 2026",
+    "quarter": "T1 2026",
+    "size": "Mediana (500–2K)",
+    "stock": "N/D",
+    "source": "https://www.calcalistech.com/ctechnews/article/hy707511ube",
+    "company_type": "Pública"
+  },
+  {
+    "company": "TrueCar",
+    "layoff_date": "2026-02-24",
+    "jobs_cut": 100,
+    "sector": "Tecnología Automotriz",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Febrero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/D",
+    "source": "https://aimgroup.com/2026/02/24/truecar-cuts-30-of-staff/",
+    "company_type": "Pública"
+  },
+  {
+    "company": "WiseTech",
+    "layoff_date": "2026-02-24",
+    "jobs_cut": 2000,
+    "sector": "Software de Logística",
+    "region": "Asia-Pacífico",
+    "country": "Australia",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Febrero 2026",
+    "quarter": "T1 2026",
+    "size": "Grande (2K–5K)",
+    "stock": "Negativa",
+    "source": "https://www.bloomberg.com/news/articles/2026-02-24/wisetech-to-cut-2-000-jobs-as-ai-ends-era-of-manual-coding",
+    "company_type": "Pública"
+  },
+  {
+    "company": "C3.ai",
+    "layoff_date": "2026-02-25",
+    "jobs_cut": 280,
+    "sector": "Investigación en IA",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Febrero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "Positiva",
+    "source": "https://www.morningstar.com/stocks/xnys/ai/earnings-transcript",
+    "company_type": "Pública"
+  },
+  {
+    "company": "Deliveroo",
+    "layoff_date": "2026-02-25",
+    "jobs_cut": 187,
+    "sector": "Comercio Electrónico",
+    "region": "Europa",
+    "country": "Reino Unido",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Febrero 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/D",
+    "source": "https://in.investing.com/news/company-news/doordash-closes-deliveroo-operations-in-qatar-and-singapore-93CH-5256077",
+    "company_type": "Pública"
+  },
+  {
+    "company": "Stone",
+    "layoff_date": "2026-03-13",
+    "jobs_cut": 400,
+    "sector": "Fintech",
+    "region": "Latinoamérica",
+    "country": "Brasil",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Marzo 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "Neutral",
+    "source": "https://jovempan.com.br/noticias/economia/stone-faz-demissao-em-massa-e-desliga-cerca-de-400-funcionarios.html",
+    "company_type": "Pública"
+  },
+  {
+    "company": "Spotify",
+    "layoff_date": "2026-03-23",
+    "jobs_cut": 15,
+    "sector": "Redes Sociales",
+    "region": "Europa",
+    "country": "Suecia",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Marzo 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "Positiva",
+    "source": "https://variety.com/2026/digital/news/spotify-podcast-layoffs-the-ringer-spotify-studios-1236697019/",
+    "company_type": "Pública"
+  },
+  {
+    "company": "Zendesk",
+    "layoff_date": "2026-03-24",
+    "jobs_cut": 100,
+    "sector": "Software Empresarial",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Marzo 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "Internalmemo",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Epic Games",
+    "layoff_date": "2026-03-24",
+    "jobs_cut": 1000,
+    "sector": "Redes Sociales",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Marzo 2026",
+    "quarter": "T1 2026",
+    "size": "Mediana (500–2K)",
+    "stock": "N/A",
+    "source": "https://www.epicgames.com/site/en-US/news/todays-layoffs",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Enpal",
+    "layoff_date": "2026-03-27",
+    "jobs_cut": 100,
+    "sector": "Baterías para VE",
+    "region": "Europa",
+    "country": "Alemania",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Marzo 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://www.businessinsider.de/gruenderszene/business/enpal-alle-zugaenge-kurz-nach-bekanntgabe-gesperrt-fast-100-mitarbeiter-entlassen/",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Monzo",
+    "layoff_date": "2026-03-31",
+    "jobs_cut": 50,
+    "sector": "Fintech",
+    "region": "Europa",
+    "country": "Reino Unido",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Marzo 2026",
+    "quarter": "T1 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://www.bloomberg.com/news/articles/2026-03-31/fintech-monzo-shutting-down-us-operations-to-focus-on-uk-europe",
+    "company_type": "Privada"
+  },
+  {
+    "company": "UKG",
+    "layoff_date": "2026-04-15",
+    "jobs_cut": 950,
+    "sector": "SaaS Empresarial",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Abril 2026",
+    "quarter": "T2 2026",
+    "size": "Mediana (500–2K)",
+    "stock": "N/A",
+    "source": "https://www.sun-sentinel.com/2026/04/16/ukg-formerly-ultimate-software-lays-off-950-employees-many-from-south-florida-offices/",
+    "company_type": "Privada"
+  },
+  {
+    "company": "Snap",
+    "layoff_date": "2026-04-15",
+    "jobs_cut": 1000,
+    "sector": "Redes Sociales",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Abril 2026",
+    "quarter": "T2 2026",
+    "size": "Mediana (500–2K)",
+    "stock": "Positiva",
+    "source": "https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html",
+    "company_type": "Pública"
+  },
+  {
+    "company": "Shutterfly",
+    "layoff_date": "2026-04-16",
+    "jobs_cut": 80,
+    "sector": "Manufactura",
+    "region": "Norteamérica",
+    "country": "EE.UU.",
+    "ai_cited": false,
+    "reason": "",
+    "month": "Abril 2026",
+    "quarter": "T2 2026",
+    "size": "Pequeña (<500)",
+    "stock": "N/A",
+    "source": "https://www.calcalistech.com/ctechnews/article/rkx2avanzg",
+    "company_type": "Privada"
   }
 ]

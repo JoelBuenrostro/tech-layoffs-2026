@@ -1,14 +1,18 @@
 [
   {
     "region": "Norteamérica",
-    "jobs_cut": 85046
+    "jobs_cut": 90756
   },
   {
     "region": "Europa",
-    "jobs_cut": 11500
+    "jobs_cut": 12917
   },
   {
     "region": "Asia-Pacífico",
-    "jobs_cut": 4600
+    "jobs_cut": 6800
+  },
+  {
+    "region": "Latinoamérica",
+    "jobs_cut": 400
   }
 ]

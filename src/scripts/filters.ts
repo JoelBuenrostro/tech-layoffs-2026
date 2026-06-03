@@ -9,6 +9,7 @@ function applyFilters(): void {
   const sectorSelect = document.getElementById('filterSector') as HTMLSelectElement | null;
   const regionSelect = document.getElementById('filterRegion') as HTMLSelectElement | null;
   const aiSelect     = document.getElementById('filterAI')     as HTMLSelectElement | null;
+  const typeSelect   = document.getElementById('filterType')   as HTMLSelectElement | null;
   const countLabel   = document.getElementById('tableCount')   as HTMLElement | null;
 
   if (!searchInput || !sectorSelect || !regionSelect || !aiSelect) return;
@@ -17,6 +18,7 @@ function applyFilters(): void {
   const sector = sectorSelect.value;
   const region = regionSelect.value;
   const ai     = aiSelect.value;
+  const type   = typeSelect?.value ?? '';
 
   const rows = document.querySelectorAll<HTMLTableRowElement>('#mainTable tbody tr');
   let visible = 0;
@@ -25,7 +27,8 @@ function applyFilters(): void {
     const ok = (!search || (row.dataset.company ?? '').includes(search))
             && (!sector || row.dataset.sector === sector)
             && (!region || row.dataset.region === region)
-            && (!ai     || row.dataset.ai     === ai);
+            && (!ai     || row.dataset.ai     === ai)
+            && (!type   || row.dataset.type   === type);
 
     row.style.display = ok ? '' : 'none';
     if (ok) visible++;
@@ -38,9 +41,9 @@ function applyFilters(): void {
 
 export function initFilters(): void {
   document.addEventListener('DOMContentLoaded', () => {
-    applyFilters(); // conteo inicial
+    applyFilters();
 
-    const ids = ['searchInput', 'filterSector', 'filterRegion', 'filterAI'];
+    const ids = ['searchInput', 'filterSector', 'filterRegion', 'filterAI', 'filterType'];
     ids.forEach(id => {
       const el = document.getElementById(id);
       el?.addEventListener('input',  applyFilters);
